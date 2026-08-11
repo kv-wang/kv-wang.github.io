@@ -8,49 +8,171 @@
     <meta name="author" content="Zixiao Wang">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <style>
+      body {
+        margin: 0;
+        background: #f7f8fb;
+        color: #222;
+        line-height: 1.55;
+      }
+
+      .page-shell {
+        width: 100%;
+        max-width: 860px;
+        margin: 28px auto;
+        border: 0;
+        border-spacing: 0;
+        border-collapse: separate;
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 16px 48px rgba(15, 23, 42, 0.08);
+      }
+
+      .content-cell {
+        padding: 22px 28px 18px;
+      }
+
+      .section-table {
+        width: 100%;
+        border: 0;
+        border-spacing: 0;
+        border-collapse: separate;
+        margin: 0 auto;
+      }
+
+      .section-heading td {
+        padding: 18px 16px 8px !important;
+      }
+
+      h2 {
+        padding-bottom: 7px;
+        border-bottom: 1px solid #e6e9ef;
+        color: #111827;
+        font-weight: 700;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+
+      .profile-photo {
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+      }
+
+      .link-row a {
+        display: inline-block;
+        margin: 2px 0;
+        font-weight: 700;
+      }
+
+      .paper-row,
+      .experience-row,
+      .misc-row {
+        transition: background-color .18s ease, box-shadow .18s ease;
+      }
+
+      .paper-row:hover,
+      .experience-row:hover,
+      .misc-row:hover {
+        background: #fafbff;
+      }
+
+      .paper-image,
+      .experience-logo,
+      .misc-image {
+        display: block;
+        margin: 0 auto;
+        object-fit: contain;
+      }
+
+      .experience-logo {
+        max-width: 104px;
+        max-height: 72px;
+      }
+
+      .experience-role,
+      .experience-date {
+        color: #4b5563;
+      }
+
+      .quote-block {
+        margin: 8px 0 0;
+        padding: 14px 16px;
+        border-left: 3px solid #d1d5db;
+        background: #fafafa;
+        color: #555;
+        font-style: italic;
+        border-radius: 0 10px 10px 0;
+      }
+
+      @media (max-width: 720px) {
+        .page-shell {
+          margin: 0;
+          border-radius: 0;
+          box-shadow: none;
+        }
+
+        .content-cell {
+          padding: 16px 14px;
+        }
+
+        .name {
+          font-size: 30px;
+        }
+
+        td {
+          box-sizing: border-box;
+        }
+      }
+    </style>
     
   </head>
 
   <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <table class="page-shell"><tbody>
       <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <td class="content-cell">
+          <table class="section-table"><tbody>
             <tr style="padding:0px">
               <td style="padding:2.5%;width:63%;vertical-align:middle">
                 <p class="name" style="text-align: center;">
                   Zixiao Wang (王子骁)
                 </p>
                 <p>
-                  Hi there !I am Zixiao Wang, a third-year undergraduate student at <a href="https://www.pku.edu.cn/">Peking University</a>, 
+                  Hi there! I am Zixiao Wang, a third-year undergraduate student at <a href="https://www.pku.edu.cn/">Peking University</a>, 
                   majoring in Artificial Intelligence in <a href="https://zhi-class.ai/">Zhi Class</a> 
                   (an honors program directed by Prof. <a href="https://baoquanchen.info/">Baoquan Chen</a>) at the <a href="https://www.cis.pku.edu.cn/">School of Intelligence Science and Technology</a>.
                   Also, I am currently exchanging at <a href="https://www.cs.cmu.edu/">School of Computer Science</a> at <a href="https://www.cmu.edu/">Carnegie Mellon University</a>.
                 </p>
                 <p>
                   My research focuses on <strong>Large Language Models</strong>, <strong>Optimization</strong> and <strong>Multimodal Learning</strong>. I am particularly interested in 
-                  developing efficient and effective optimization algorithms for multiple training stages of large language models, as well as analyzing the theoretical properties behind the training process.
+                 applying efficient and effective optimization algorithms for pretraining and RL post training of large language models, as well as analyzing the theoretical properties behind the training process.
+                 I'm also interested in exploring the potential of multimodal learning, especially in the context of video understanding and generation.
                 </p>
                 <p>
                   I am honored to be advised by Prof. <a href="https://huishuai-git.github.io/">Huishuai Zhang</a> and Prof. <a href="https://www.wict.pku.edu.cn/zhaodongyan/en/">Dongyan Zhao</a>
                   in <a href="https://www.wict.pku.edu.cn/english/home/index.htm">Wangxuan Institute of Computer Technology</a>. I am also very fortunate to be currently working closely with Prof. <a href="https://jwzhang.netlify.app/">Jiawen Zhang</a> from <a href="https://www.wisc.edu/">University of Wisconsin-Madison</a>.
                   Previously, I also had the privilege to work with Prof. <a href="https://www.csyangliu.com/">Yang Liu</a>.
                 </p>
-                <p style="text-align:center">
+                <p class="link-row" style="text-align:center">
                   <a href="mailto:herowangzx@stu.pku.edu.cn">Email</a> &nbsp;/&nbsp;
                   <a href="https://github.com/kv-wang">GitHub</a> &nbsp;/&nbsp;
-                  <a href="https://scholar.google.com/citations?hl=en&user=TVr9GLIAAAAJ">Google Scholar</a> &nbsp;/&nbsp;
+                  <a href="https://scholar.google.com/citations?hl=en&amp;user=TVr9GLIAAAAJ">Google Scholar</a> &nbsp;/&nbsp;
                   <a href="https://openreview.net/profile?id=%7EZixiao_Wang9">Openreview</a> &nbsp;/&nbsp;
                   <a href="Resume_ZixiaoWang.pdf">CV</a>
                 </p>
               </td>
               <td style="padding:2.5%;width:37%;max-width:37%">
-                <a href="assets/images/resume.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="assets/images/resume.jpg" class="hoverZoomLink"></a>
+                <a href="assets/images/resume.jpg"><img alt="profile photo" src="assets/images/resume.jpg" class="profile-photo hoverZoomLink"></a>
               </td>
             </tr>
           </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr>
+          <table class="section-table"><tbody>
+              <tr class="section-heading">
               <td style="padding:16px;width:100%;vertical-align:middle">
                 <h2>News</h2>
                 <p>
@@ -59,22 +181,22 @@
               </td>
             </tr>
           </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr>
+          <table class="section-table"><tbody>
+              <tr class="section-heading">
               <td style="padding:16px;width:100%;vertical-align:middle">
                 <h2>Research</h2>
                 <p>
-                  I'm interested in large language models, optimization algorithms, and multimodal learning.
+                  Large Language Models; Optimization; Pretraining; Efficient Reinforcement Learning; Multimodal
                 </p>
               </td>
             </tr>
           </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table class="section-table" style="border-spacing:0px 10px;"><tbody>
 
-<tr>
+<tr class="paper-row">
   <td style="padding:16px;width:25%;vertical-align:middle">
     <div class="one">
-      <img src='assets/images/olion.png' width="180">
+      <img class="paper-image" src='assets/images/olion.png' width="180">
     </div>
   </td>
   <td style="padding:8px;width:75%;vertical-align:middle">
@@ -90,7 +212,8 @@
     <br>
     <em>ICML 2026</em>, 2026-5 &nbsp; <font color="red"><strong>Accepted</strong></font>
     <br>
-    <a href="https://arxiv.org/abs/2602.01105">Arxiv Preprint</a>
+    <a href="https://arxiv.org/abs/2602.01105">Arxiv Preprint</a> /
+    <a href="https://icml.cc/virtual/2026/poster/62586">Virtual Poster</a>
     <p></p>
     <p>
       We introduce OLion, a memory-efficient optimizer that combines spectral control from Muon-style orthogonalized updates with ℓ<sub>∞</sub>-style coordinate control from Lion-style sign updates.
@@ -98,10 +221,10 @@
   </td>
 </tr>
 
-<tr>
+<tr class="paper-row">
   <td style="padding:16px;width:25%;vertical-align:middle">
     <div class="one">
-      <img src='assets/images/bullshit.png' width="180">
+      <img class="paper-image" src='assets/images/bullshit.png' width="180">
     </div>
   </td>
   <td style="padding:8px;width:75%;vertical-align:middle">
@@ -118,7 +241,7 @@
     <a href="#">https://openreview.net/pdf?id=eIhP3pDpWx</a>
     <p></p>
     <p>
-      We present a novel training-free video-level adapter to enhance video temporal grounding by importing in-domain context andregion-wisevisual cues.
+      We present a novel training-free video-level adapter to enhance video temporal grounding by importing in-domain context and region-wise visual cues.
     </p>
   </td>
 </tr>
@@ -126,57 +249,69 @@
           </tbody></table>
 
           
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr>
+          <table class="section-table"><tbody>
+              <tr class="section-heading">
               <td style="padding:16px;width:100%;vertical-align:middle">
                 <h2>Experience</h2>
               </td>
             </tr>
           </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
+          <table class="section-table" style="border-spacing:0px 10px;"><tbody>
+            <tr class="experience-row">
               <td style="padding:16px;width:25%;vertical-align:middle">
-                <img src='assets/images/CMU_SCS.png' width="96">
+                <img class="experience-logo" src='assets/images/madison.png' width="104" alt="University of Wisconsin-Madison logo">
+              </td>
+              <td style="padding:8px;width:75%;vertical-align:middle">
+                <a href="https://www.wisc.edu/"><strong>University of Wisconsin-Madison</strong></a>
+                <br>
+                <span class="experience-date">2026.5 - present</span>
+                <br>
+                <span class="experience-role">Summertime Research Intern</span>
+              </td>
+            </tr>
+            <tr class="experience-row">
+              <td style="padding:16px;width:25%;vertical-align:middle">
+                <img class="experience-logo" src='assets/images/CMU_SCS.png' width="96" alt="CMU SCS logo">
               </td>
               <td style="padding:8px;width:75%;vertical-align:middle">
                 <a href="https://www.cs.cmu.edu/"><strong>School of Computer Science, Carnegie Mellon University</strong></a>
                 <br>
-                2026.1 - present
+                <span class="experience-date">2026.1 - 2026.5</span>
                 <br>
-                Visiting Student
+                <span class="experience-role">Visiting Student</span>
               </td>
             </tr>
-            <tr>
+            <tr class="experience-row">
               <td style="padding:16px;width:25%;vertical-align:middle">
-                <img src='assets/images/wipt.png' width="96">
+                <img class="experience-logo" src='assets/images/wipt.png' width="96" alt="WICT WIP Lab logo">
               </td>
               <td style="padding:8px;width:75%;vertical-align:middle">
                 <strong> <a href="http://wip.wict.pku.edu.cn/">Wangxuan Institute of Computer Technology Web Information Processing Lab</a></strong>
                 <br>
-                2025.5 - present
+                <span class="experience-date">2025.5 - present</span>
                 <br>
-                Research Intern
+                <span class="experience-role">Research Intern</span>
               </td>
             </tr>
-            <tr>
+            <tr class="experience-row">
               <td style="padding:16px;width:25%;vertical-align:middle">
-                <img src='assets/images/Zhi_class.png' width="96">
+                <img class="experience-logo" src='assets/images/Zhi_class.png' width="96" alt="Zhi Class logo">
               </td>
               <td style="padding:8px;width:75%;vertical-align:middle">
                 <a href="https://zhi-class.ai/"><strong>Zhi Class, Peking University</strong></a>
                 <br>
-                2023.9 - present
+                <span class="experience-date">2023.9 - present</span>
                 <br>
-                Undergraduate Student
+                <span class="experience-role">Undergraduate Student</span>
               </td>
             </tr>
           </tbody></table>
 
 
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr>
+          <table class="section-table"><tbody>
+              <tr class="section-heading">
               <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Honors & Awards</h2>
+                <h2>Honors &amp; Awards</h2>
                 <p>
                   <strong>2023-24</strong> &nbsp; Leo KoGuan Scholarship (20000 CNY, top 100 students in PKU per year)<br>
                   <strong>2023-24</strong> &nbsp; Peking University Merit Student<br>
@@ -186,32 +321,23 @@
             </tr>
           </tbody></table>
 
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr>
+          <table class="section-table"><tbody>
+              <tr class="section-heading">
                 <td style="padding:16px;width:100%;vertical-align:middle">
                   <h2>Miscellaneous</h2>
                 </td>
               </tr>
-              <tr>
-                <td style="padding:8px 16px;width:100%;vertical-align:top">
-                  <table style="border:0;border-spacing:0;"><tr>
-                    <td style="padding:0;vertical-align:middle;">
-                      <p style="margin:0;">
-                        I love bodybuilding and believe in "tough body for tough mind".
-                      </p>
-                    </td>
-                  </tr></table>
-                </td>
-              </tr>
-              <tr>
+              
+              <tr class="misc-row">
                 <td style="padding:8px 16px;width:100%;vertical-align:top">
                   <table style="border:0;border-spacing:0;"><tr>
                     <td style="padding:0 12px 0 0;vertical-align:middle;width:96px;">
-                      <img src='assets/images/bouldering.jpg' width="96" style="display:block;">
+                      <img class="misc-image" src='assets/images/bouldering.jpg' width="96" style="display:block;" alt="Bouldering photo">
                     </td>
                     <td style="padding:0;vertical-align:middle;">
                       <p style="margin:0;">
-                        I'm a bouldering enthusiast. Love the feeling of going up.
+                        Beyond research, I have a wide range of hobbies — traveling, working out, and rock climbing which I find particularly exciting. 
+                        For rock climbing, I especially enjoy bouldering. Currently, I'm a v6 climber in bouldering gyms in USA and China.
                       </p>
                     </td>
                   </tr></table>
@@ -219,10 +345,10 @@
               </tr>
           </tbody></table>
 
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table class="section-table"><tbody>
               <tr>
               <td style="padding:16px;width:100%;vertical-align:middle">
-                <p style="font-style: italic; color: #666;">
+                <p class="quote-block">
                   "Per Aspera Ad Astra."
                   <br>
                   — Through Hardships to the Stars
@@ -232,7 +358,7 @@
           </tbody></table>
 
 
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table class="section-table"><tbody>
             <tr>
               <td style="padding:0px">
                 <br>
